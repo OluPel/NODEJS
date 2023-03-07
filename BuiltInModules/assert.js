@@ -1,8 +1,6 @@
 // The assert module provides a way of testing expressions and assertion functions for verifying invariants. If the expression evaluates to 0, or false, an assertion failure is being caused, and the program is terminated.
 // import { strict as assert } from 'node:assert';
 
-// var assert = require('assert');
-// assert(5 > 7);
 
 
 const http = require('http');
