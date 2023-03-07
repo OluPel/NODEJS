@@ -1,13 +1,14 @@
 var arr = new Array();
 const router = async function (req, res) {
   if (req.url === "/api/upload_name" && req.method === "GET") {
-    // set the status code, and content-type
+
+    // setting the status code, and content-type of the modules
     res.writeHead(200, { "Content-Type": "application/json" });
-    // send the data
+    // sending the data
     res.end(JSON.stringify(arr));
   }
 
-  //  POST: /api/name
+  //  POST: /api/savethename
   if (req.url === "/api/savethename" /*&& req.method === "POST"*/) {
     try {
       const readline = require("readline");
@@ -27,7 +28,7 @@ const router = async function (req, res) {
 
       let body = "Kindly add the name through the terminal";
       res.writeHead(200, { "Content-Type": "application/json" });
-      //send response
+      //sending the response
       res.end(JSON.stringify(body));
     } catch (error) {
       console.log(error);
